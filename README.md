@@ -1,16 +1,15 @@
-الصطوره قيصر 
-# القيصر
+# -*- coding: utf-8 -*-
 import sys
 import logging
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 
+# Configure logging
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 
 class AlQaisarFramework:
     def __init__(self):
-        # تم دمج الواجهتين بشكل متناسق
         self.banner = r"""
 88888888888888888888888888888888888888888888888888888888888888888888888
 88.._|      | `-.  | `.  -_-_ _-_  _-  _- -_ -  .'|   |.'|     |  _..88
@@ -34,7 +33,7 @@ class AlQaisarFramework:
 88     .'   | .'   |/|  /                     \ |`!   |`.|    `.  |  88
 88  _.'     !'|   .' | /                       \|  `  |  `.    |`.|  88
     
-    [ القيصر اليمني - Al-Qaisar Al-Yamani ]
+    [ Al-Qaisar Al-Yamani ]
 
              _
        / \      _-'
@@ -49,7 +48,7 @@ __-' { |          \
            / '-____'
           /
         _'
-      القيصر اليماني
+      Al-Qaisar Al-Yamani
         """
 
     def display_banner(self):
@@ -64,14 +63,14 @@ __-' { |          \
             service = Service()
             return webdriver.Chrome(service=service, options=chrome_options)
         except Exception as e:
-            logging.error(f"[!] خطأ أثناء تشغيل المتصفح: {e}")
+            logging.error(f"[!] Browser initialization error: {e}")
             return None
 
     def run(self):
         self.display_banner()
-        logging.info("[+] تم تحميل إطار القيصر اليمني بنجاح.")
-        logging.info("[!] النظام جاهز للعمل.")
-        
+        logging.info("[+] Al-Qaisar Framework loaded successfully.")
+        logging.info("[!] System is ready.")
+
 if __name__ == "__main__":
     app = AlQaisarFramework()
     app.run()
