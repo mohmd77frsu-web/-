@@ -6,7 +6,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 
-# إعداد سجل الأخطاء
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 
 class AlQaisarFramework:
